@@ -134,7 +134,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col min-[851px]:flex-row gap-6 items-center">
               <a 
-                href={`mailto:${personalInfo.email}?subject=Entretien%20CDI%20%E2%80%94%20Email%20Architect%20Senior`}
+                href={`mailto:${personalInfo.email}?subject=Entretien%20CDI%20-%20Email%20Architect%20Senior`}
                 className="bg-accent hover:bg-blue-500 text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_50px_rgba(59,130,246,0.8)] relative overflow-hidden group w-full min-[851px]:w-auto text-center"
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
@@ -163,6 +163,21 @@ export default function Home() {
             className="flex items-center gap-1.5 hover:text-accent transition-colors underline-offset-4 hover:underline"
           >
             Journal Reflex.io (CRO & Biais cognitifs) <ExternalLink size={12} />
+          </a>
+          <a 
+            href={personalInfo.linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-1.5 hover:text-accent transition-colors underline-offset-4 hover:underline"
+          >
+            Linkedin <ExternalLink size={12} />
+          </a>
+          <a 
+            href="/Portfolio/cv-thierry-thiesson.pdf" 
+            target="_blank" 
+            className="flex items-center gap-1.5 hover:text-accent transition-colors underline-offset-4 hover:underline"
+          >
+            Télécharger le CV <ExternalLink size={12} />
           </a>
           <a 
             href="https://mist3rth.github.io/presentMe/" 

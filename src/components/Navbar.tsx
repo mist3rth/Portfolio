@@ -47,7 +47,7 @@ export default function Navbar() {
 
           {/* CTA - Always visible */}
           <a 
-            href={`mailto:${personalInfo.email}?subject=Entretien%20CDI%20%E2%80%94%20Email%20Architect%20Senior`}
+            href={`mailto:${personalInfo.email}?subject=Entretien%20CDI%20-%20Email%20Architect%20Senior`}
             className="bg-accent text-white px-4 md:px-7 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.6)] shrink-0"
           >
             Me contacter

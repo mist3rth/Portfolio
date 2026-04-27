@@ -3,20 +3,20 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/Portfolio/screen/Krys_2025_Email-Krys_20visagisme_mail.webp",
-  "/Portfolio/screen/Krys_2025_Emails-Krys_20French_20discorder_Email_201.webp",
-  "/Portfolio/screen/Krys_2025_Emails-Krys_20signature_brief_20Singature_20Krys_20prod_Bleu.webp",
-  "/Portfolio/screen/Krys_2025_Emails_20Krys-Myopie_email-myopie_20e-commerce.webp",
-  "/Portfolio/screen/Lapeyre_Email-Lapeyre_client_20prospect.webp",
-  "/Portfolio/screen/Louis_2013_Email-Louis_20XIII-Fluide_Welcome.webp",
-  "/Portfolio/screen/Mc_20Donald_Mails_Template_20Email_20Mc_20Donald_20CRM_template.webp",
-  "/Portfolio/screen/Mercedes_20VU_2025_Email-Mercedes_20Sprinter_sprinter.webp",
-  "/Portfolio/screen/Mercedes_20VU_2025_Emails-Mercedes_20VU_20voeux_particulier.webp",
-  "/Portfolio/screen/Mercedes_20VU_2025_Emails-Mercedes_20ventes_20privees_email_gamme.webp",
-  "/Portfolio/screen/Pampers_2024_Mails_Newsletters_20pampers_202_template.webp",
-  "/Portfolio/screen/Peugeot_2023_04-Avril_Emails_Emails-Peugeot_20E-2008_HTML_20B2B.webp",
-  "/Portfolio/screen/Peugeot_2023_10-Octobre_Mails_Email-Peugeot_20Traveller_html.webp",
-  "/Portfolio/screen/Smart_Email-Smart_20ServiceCare_smart_20ServiceCare.webp",
+  "/Portfolio/Screen/Krys_2025_Email-Krys_20visagisme_mail.webp",
+  "/Portfolio/Screen/Krys_2025_Emails-Krys_20French_20discorder_Email_201.webp",
+  "/Portfolio/Screen/Krys_2025_Emails-Krys_20signature_brief_20Singature_20Krys_20prod_Bleu.webp",
+  "/Portfolio/Screen/Krys_2025_Emails_20Krys-Myopie_email-myopie_20e-commerce.webp",
+  "/Portfolio/Screen/Lapeyre_Email-Lapeyre_client_20prospect.webp",
+  "/Portfolio/Screen/Louis_2013_Email-Louis_20XIII-Fluide_Welcome.webp",
+  "/Portfolio/Screen/Mc_20Donald_Mails_Template_20Email_20Mc_20Donald_20CRM_template.webp",
+  "/Portfolio/Screen/Mercedes_20VU_2025_Email-Mercedes_20Sprinter_sprinter.webp",
+  "/Portfolio/Screen/Mercedes_20VU_2025_Emails-Mercedes_20VU_20voeux_particulier.webp",
+  "/Portfolio/Screen/Mercedes_20VU_2025_Emails-Mercedes_20ventes_20privees_email_gamme.webp",
+  "/Portfolio/Screen/Pampers_2024_Mails_Newsletters_20pampers_202_template.webp",
+  "/Portfolio/Screen/Peugeot_2023_04-Avril_Emails_Emails-Peugeot_20E-2008_HTML_20B2B.webp",
+  "/Portfolio/Screen/Peugeot_2023_10-Octobre_Mails_Email-Peugeot_20Traveller_html.webp",
+  "/Portfolio/Screen/Smart_Email-Smart_20ServiceCare_smart_20ServiceCare.webp",
 ];
 
 export default function IsometricBackground() {
