@@ -39,7 +39,7 @@ export default function ContactButton({ className, label = "Me contacter", varia
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
       <span className={`flex items-center gap-2 transition-all duration-300 ${copied ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-        {variant !== 'navbar' && <Mail size={20} />}
+        <Mail size={variant === 'navbar' ? 16 : 20} />
         {label}
       </span>
       
