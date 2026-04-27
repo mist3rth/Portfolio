@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://misterth.github.io/Portfolio/sitemap.xml
