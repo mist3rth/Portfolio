@@ -5,6 +5,7 @@ export const personalInfo = {
   phone: "06-62-31-36-65",
   email: "mist3rth@gmail.com",
   portfolioUrl: "https://mist3rth.github.io/presentMe/",
+  linkedin: "https://www.linkedin.com/in/thierry-thiesson-7887501/",
   summary:
     "Thierry Thiesson ne livre pas des fichiers HTML, il livre des actifs numériques pérennes. Son expertise repose sur la création de templates 100% Bulletproof et Zero-Dependency, garantissant une stabilité éternelle et une indépendance totale vis-à-vis des outils du marché. Son processus unique combine une architecture technique chirurgicale et l'application de biais cognitifs pour créer un flow mental chez le destinataire, transformant chaque email en un outil de conversion haute précision (CRO).",
 };
