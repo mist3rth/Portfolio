@@ -1,4 +1,5 @@
 import { personalInfo } from "@/data/cvData";
+import ContactButton from "./ContactButton";
 import { ArrowRight, Terminal } from "lucide-react";
 import Image from "next/image";
 import AnimatedCounter from "@/components/AnimatedCounter";
@@ -60,9 +61,7 @@ export default function Hero() {
         </p>
 
         <div className="pt-6 flex flex-wrap gap-4 md:gap-6 items-center">
-          <a href={`mailto:${personalInfo.email}?subject=Entretien%20CDI%20-%20Email%20Architect%20Senior`} className="bg-accent text-white px-8 py-4 rounded-full font-bold transition-all duration-300 flex items-center gap-3 group text-lg shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:shadow-[0_0_50px_rgba(59,130,246,0.8)] hover:scale-105 hover:bg-blue-500">
-            Organiser un entretien <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </a>
+          <ContactButton label="Organiser un entretien" />
           <a 
             href="/Portfolio/cv-thierry-thiesson.pdf" 
             download="CV-Thierry-Thiesson-Email-Architect.pdf"
