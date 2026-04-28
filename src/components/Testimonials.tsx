@@ -98,22 +98,25 @@ export default function Testimonials() {
               </div>
 
               {/* Auteur */}
-              <div className="relative z-10 mt-8 flex items-center gap-4 pt-6 border-t border-white/5">
-                {/* Avatar initial */}
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/10 shrink-0">
-                  <Image src={t.photo} alt={t.name} fill className="object-cover" sizes="48px" />
+              <div className="relative z-10 mt-8 pt-6 border-t border-white/5">
+                <div className="flex items-center gap-4 mb-4">
+                  {/* Avatar */}
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white/10 shrink-0 shadow-xl">
+                    <Image src={t.photo} alt={t.name} fill className="object-cover" sizes="56px" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-bold text-primary text-base leading-tight">{t.name}</p>
+                    <p className="text-xs text-secondary font-mono mt-1 leading-snug">
+                      {t.role}
+                    </p>
+                    <p className="text-xs text-accent font-mono mt-0.5">{t.company}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-bold text-primary text-sm">{t.name}</p>
-                  <p className="text-xs text-secondary font-mono mt-0.5">
-                    {t.role}
-                  </p>
-                  <p className="text-xs text-accent/60 font-mono">{t.company}</p>
-                </div>
-                {/* Dot "vérifié" */}
-                <div className="ml-auto flex items-center gap-1.5">
-                  <span className={`w-2 h-2 rounded-full ${t.dotColor} animate-pulse`}></span>
-                  <span className="text-[10px] font-mono text-white/30 uppercase tracking-wider">Vérifié</span>
+                
+                {/* Badge de vérification - Placé en dessous pour plus de visibilité */}
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
+                  <span className={`w-2 h-2 rounded-full ${t.dotColor} animate-pulse shadow-[0_0_8px_rgba(255,255,255,0.3)]`}></span>
+                  <span className="text-[10px] font-bold font-mono text-white/60 uppercase tracking-widest">Recommandation vérifiée</span>
                 </div>
               </div>
             </div>

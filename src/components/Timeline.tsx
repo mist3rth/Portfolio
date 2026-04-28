@@ -22,16 +22,16 @@ export default function Timeline() {
             </p>
           </div>
 
-      <div className="relative border-l-2 border-accent/20 pl-8 md:pl-12 space-y-16 py-4 group/timeline">
-        {/* Animated line on hover/scroll */}
-        <div className="absolute inset-y-0 left-[-2px] w-[2px] bg-accent h-0 group-hover/timeline:h-full transition-all duration-[2000ms] ease-in-out"></div>
+      <div className="relative border-l-0 md:border-l-2 border-accent/20 pl-0 md:pl-12 space-y-16 py-4 group/timeline">
+        {/* Animated line on hover/scroll - Desktop only */}
+        <div className="hidden md:block absolute inset-y-0 left-[-2px] w-[2px] bg-accent h-0 group-hover/timeline:h-full transition-all duration-[2000ms] ease-in-out"></div>
 
         {experiences.map((exp, index) => (
           <div key={exp.id} className="relative group">
-            {/* Dot */}
-            <div className="absolute w-6 h-6 bg-black border-4 border-accent rounded-full -left-[45px] md:-left-[61px] top-1 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_rgba(59,130,246,0.6)] z-10"></div>
+            {/* Dot - Desktop only */}
+            <div className="hidden md:block absolute w-6 h-6 bg-black border-4 border-accent rounded-full -left-[45px] md:-left-[61px] top-1 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_rgba(59,130,246,0.6)] z-10"></div>
             
-            <div className="bg-black/40 backdrop-blur-xl glass-panel p-10 rounded-2xl hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 group-hover:-translate-y-1 border border-glass-border">
+            <div className="bg-black/40 backdrop-blur-xl glass-panel p-6 md:p-10 rounded-2xl hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 group-hover:-translate-y-1 border border-glass-border">
               <span className="inline-block py-1.5 px-4 rounded-full bg-accent/20 border border-accent/30 text-accent font-bold text-xs tracking-widest uppercase mb-6">
                 {exp.period}
               </span>

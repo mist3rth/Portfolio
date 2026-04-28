@@ -148,39 +148,39 @@ export default function Home() {
         </div>
       </section>
       
-      <footer className="bg-[#030303] border-t border-white/5 py-10 px-6 flex flex-col items-center gap-4 text-sm text-gray-600 relative z-10 text-center">
-        <p>© {new Date().getFullYear()} {personalInfo.name}. Construit selon la méthode BMAD.</p>
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-2 font-mono text-xs">
+      <footer className="bg-[#030303] border-t border-white/5 py-12 px-6 flex flex-col items-center gap-6 text-sm text-white/40 relative z-10 text-center">
+        <p className="font-light tracking-wide italic">© {new Date().getFullYear()} {personalInfo.name}. Construit selon la méthode BMAD.</p>
+        <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 font-mono text-xs text-white/70">
           <a 
             href="https://mist3rth.github.io/Reflex.io/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="flex items-center gap-1.5 hover:text-accent transition-colors underline-offset-4 hover:underline"
+            className="flex items-center gap-2 hover:text-accent transition-all duration-300 underline-offset-4 hover:underline decoration-accent/30"
           >
-            Journal Reflex.io (CRO & Biais cognitifs) <ExternalLink size={12} />
+            Journal Reflex.io (CRO & Biais cognitifs) <ExternalLink size={12} className="opacity-50" />
           </a>
           <a 
             href={personalInfo.linkedin} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="flex items-center gap-1.5 hover:text-accent transition-colors underline-offset-4 hover:underline"
+            className="flex items-center gap-2 hover:text-accent transition-all duration-300 underline-offset-4 hover:underline decoration-accent/30"
           >
-            Linkedin <ExternalLink size={12} />
+            Linkedin <ExternalLink size={12} className="opacity-50" />
           </a>
           <a 
             href="/Portfolio/cv-thierry-thiesson.pdf" 
             target="_blank" 
-            className="flex items-center gap-1.5 hover:text-accent transition-colors underline-offset-4 hover:underline"
+            className="flex items-center gap-2 hover:text-accent transition-all duration-300 underline-offset-4 hover:underline decoration-accent/30"
           >
-            Télécharger le CV <ExternalLink size={12} />
+            Télécharger le CV <ExternalLink size={12} className="opacity-50" />
           </a>
           <a 
             href="https://mist3rth.github.io/presentMe/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="flex items-center gap-1.5 hover:text-accent transition-colors underline-offset-4 hover:underline"
+            className="flex items-center gap-2 hover:text-accent transition-all duration-300 underline-offset-4 hover:underline decoration-accent/30"
           >
-            Archives & Compétences complémentaires <ExternalLink size={12} />
+            Archives & Compétences complémentaires <ExternalLink size={12} className="opacity-50" />
           </a>
         </div>
       </footer>
