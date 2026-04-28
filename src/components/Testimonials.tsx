@@ -114,7 +114,7 @@ export default function Testimonials() {
                     {/* Badge de vérification */}
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
                       <span className={`w-2 h-2 rounded-full ${t.dotColor} animate-pulse`}></span>
-                      <span className="text-[10px] font-bold font-mono text-white/70 uppercase tracking-widest">Avis vérifiés</span>
+                      <span className="text-[10px] font-bold font-mono text-secondary uppercase tracking-widest">Avis vérifiés</span>
                     </div>
                   </div>
                 </div>

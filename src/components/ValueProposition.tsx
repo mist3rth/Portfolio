@@ -40,8 +40,8 @@ export default function ValueProposition() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-white/70 border border-white/10 w-full sm:w-fit text-center">#FutureProof</span>
-                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-white/70 border border-white/10 w-full sm:w-fit text-center">#NativeCode</span>
+                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-secondary border border-white/10 w-full sm:w-fit text-center">#FutureProof</span>
+                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-secondary border border-white/10 w-full sm:w-fit text-center">#NativeCode</span>
                 </div>
               </div>
               

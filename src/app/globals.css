@@ -65,6 +65,14 @@
   color: #030303 !important;
 }
 
+/* Exception pour le texte blanc sur fond bleu (accent) */
+.light-mode .bg-accent .text-white,
+.light-mode .bg-accent.text-white,
+.light-mode [class*="bg-accent"] .text-white,
+.light-mode [class*="bg-accent"] .text-secondary {
+  color: #ffffff !important;
+}
+
 .light-mode .bg-black\/40,
 .light-mode .bg-\[\#050505\]\/80,
 .light-mode .bg-\[\#050505\]\/60 {
