@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   },
 };
 
+import CustomCursor from "@/components/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,7 +41,8 @@ export default function RootLayout({
       lang="fr"
       className={`${plusJakartaSans.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
+      <body className="min-h-full flex flex-col font-sans bg-background text-foreground overflow-x-hidden">
+        <CustomCursor />
         {children}
       </body>
     </html>

@@ -31,7 +31,7 @@ export default function Timeline() {
             {/* Dot - Desktop only */}
             <div className="hidden md:block absolute w-6 h-6 bg-black border-4 border-accent rounded-full -left-[45px] md:-left-[61px] top-1 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_rgba(59,130,246,0.6)] z-10"></div>
             
-            <div className="bg-black/40 backdrop-blur-xl glass-panel p-[10px] md:p-10 rounded-2xl hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 group-hover:-translate-y-1 border border-glass-border">
+            <div className="bg-black/40 backdrop-blur-xl glass-panel p-[10px] md:p-10 rounded-2xl hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 group-hover:-translate-y-1 border border-glass-border cursor-pointer">
               <span className="inline-block py-1.5 px-4 rounded-full bg-accent/20 border border-accent/30 text-accent font-bold text-xs tracking-widest uppercase mb-6">
                 {exp.period}
               </span>

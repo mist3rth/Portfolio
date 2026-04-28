@@ -28,7 +28,7 @@ export default function Expertises() {
             {/* Animated Gradient Border (Glassmorphism Touch) */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-accent/30 opacity-30 group-hover:opacity-100 transition-opacity duration-500 z-0 rounded-3xl"></div>
             
-            <div className="glass-panel p-[10px] md:p-10 relative h-full w-full rounded-[23px] flex flex-col justify-between overflow-hidden transition-all duration-500 group-hover:-translate-y-1 bg-[#050505]/60">
+            <div className="glass-panel p-[10px] md:p-10 relative h-full w-full rounded-[23px] flex flex-col justify-between overflow-hidden transition-all duration-500 group-hover:-translate-y-1 bg-[#050505]/60 cursor-pointer">
               
               {/* Surgical Blur Spot */}
               <div className="absolute -top-12 -right-12 w-32 h-32 bg-accent/30 rounded-full blur-[40px] group-hover:bg-accent/40 transition-colors duration-500 pointer-events-none"></div>
