@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://misterth.github.io/Portfolio/sitemap.xml
+Sitemap: https://mist3rth.github.io/Portfolio/sitemap.xml

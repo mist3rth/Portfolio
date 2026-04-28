@@ -58,7 +58,7 @@ export default function IsometricBackground() {
   // On génère le tableau final selon le besoin réel
   const columns = [...baseColumns, ...baseColumns].slice(0, visibleColumns);
 
-  if (!isInView && typeof window !== 'undefined') {
+  if (!isInView) {
     return <div id="isometric-trigger" className="absolute inset-0 pointer-events-none" />;
   }
 

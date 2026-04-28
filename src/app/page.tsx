@@ -23,7 +23,7 @@ export default function Home() {
     "@type": "Person",
     name: personalInfo.name,
     jobTitle: personalInfo.title,
-    url: "https://misterth.github.io/Portfolio",
+    url: "https://mist3rth.github.io/Portfolio",
     email: personalInfo.email,
     telephone: personalInfo.phone,
     address: {
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
       
       <footer className="bg-[#030303] border-t border-white/5 py-12 px-6 flex flex-col items-center gap-6 text-sm text-gray-400 relative z-10 text-center">
-        <p className="font-light tracking-wide italic">© {new Date().getFullYear()} {personalInfo.name}. Construit selon la méthode BMAD.</p>
+        <p className="font-light tracking-wide italic">© 2026 {personalInfo.name}. Construit selon la méthode BMAD.</p>
         <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 font-mono text-xs text-white/90">
           <a 
             href="https://mist3rth.github.io/Reflex.io/" 
