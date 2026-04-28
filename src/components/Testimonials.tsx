@@ -76,7 +76,7 @@ export default function Testimonials() {
             delay={idx * 150}
           >
             <div
-              className={`relative h-full glass-panel p-10 bg-[#050505]/80 backdrop-blur-xl border ${t.borderColor} rounded-3xl hover:border-opacity-60 transition-all duration-500 group flex flex-col justify-between overflow-hidden`}
+              className={`relative h-full glass-panel p-[10px] md:p-10 bg-[#050505]/80 backdrop-blur-xl border ${t.borderColor} rounded-3xl hover:border-opacity-60 transition-all duration-500 group flex flex-col justify-between overflow-hidden`}
             >
               {/* Glow de fond */}
               <div

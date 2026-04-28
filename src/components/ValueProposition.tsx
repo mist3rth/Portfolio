@@ -22,7 +22,7 @@ export default function ValueProposition() {
         
         {/* Box 1 : Souveraineté - Large Left */}
         <ScrollReveal animation="slide-right" delay={150} className="md:col-span-2 md:row-span-2">
-          <div className="h-full glass-panel p-10 bg-[#050505]/80 backdrop-blur-xl relative overflow-hidden group border border-white/5 hover:border-accent/30 transition-all duration-500">
+          <div className="h-full glass-panel p-[10px] md:p-10 bg-[#050505]/80 backdrop-blur-xl relative overflow-hidden group border border-white/5 hover:border-accent/30 transition-all duration-500">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[100px] group-hover:bg-accent/20 transition-all duration-700 pointer-events-none"></div>
             
             <div className="relative z-10 h-full flex flex-col md:flex-row gap-8">
@@ -71,7 +71,7 @@ export default function ValueProposition() {
 
         {/* Box 2 : Mental Flow - Top Right */}
         <ScrollReveal animation="slide-left" delay={300}>
-          <div className="h-full glass-panel p-8 bg-[#050505]/80 backdrop-blur-xl relative overflow-hidden group border border-white/5 hover:border-accent/30 transition-all duration-500 flex flex-col justify-between">
+          <div className="h-full glass-panel p-[10px] md:p-8 bg-[#050505]/80 backdrop-blur-xl relative overflow-hidden group border border-white/5 hover:border-accent/30 transition-all duration-500 flex flex-col justify-between">
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-purple-500/20 rounded-full blur-[50px] pointer-events-none"></div>
             <div className="relative z-10">
               <BrainCircuit className="w-8 h-8 text-purple-400 mb-6 drop-shadow-[0_0_10px_rgba(168,85,247,0.6)]" />
@@ -85,7 +85,7 @@ export default function ValueProposition() {
 
         {/* Box 3 : Vitesse & Prod - Bottom Right */}
         <ScrollReveal animation="slide-up" delay={450}>
-          <div className="h-full glass-panel p-8 bg-accent/10 backdrop-blur-xl relative overflow-hidden group border border-accent/20 hover:border-accent/50 transition-all duration-500 flex flex-col justify-between">
+          <div className="h-full glass-panel p-[10px] md:p-8 bg-accent/10 backdrop-blur-xl relative overflow-hidden group border border-accent/20 hover:border-accent/50 transition-all duration-500 flex flex-col justify-between">
             <div className="absolute -top-10 -left-10 w-32 h-32 bg-accent/40 rounded-full blur-[50px] pointer-events-none"></div>
             <div className="relative z-10 flex flex-col h-full">
               <div className="flex justify-between items-start mb-6">
