@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     url: "https://thierry-thiesson.vercel.app",
     type: "profile",
     locale: "fr_FR",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Thierry Thiesson — Email Architect Senior" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Thierry Thiesson — Email Architect Senior" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Thierry Thiesson | Email Architect Senior",
     description: "25 ans d'expertise en architecture email bulletproof. Disponible en CDI Paris/Remote.",
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
   },
 };
 

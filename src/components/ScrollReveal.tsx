@@ -57,7 +57,7 @@ export default function ScrollReveal({
   return (
     <div
       ref={domRef}
-      className={`transition-all ${getAnimationClasses()} ${className}`}
+      className={`transition-[opacity,transform] ${getAnimationClasses()} ${className}`}
       style={{
         transitionDuration: `${duration}ms`,
         transitionDelay: `${delay}ms`,

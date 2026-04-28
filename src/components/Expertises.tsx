@@ -1,4 +1,3 @@
-"use client";
 import { expertises } from "@/data/cvData";
 import { Code, Layout, Users, BookOpen, Zap, MonitorSmartphone } from "lucide-react";
 

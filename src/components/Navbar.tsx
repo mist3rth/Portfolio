@@ -4,17 +4,21 @@ import { personalInfo } from "@/data/cvData";
 import ContactButton from "./ContactButton";
 import { Menu, X } from "lucide-react";
 
+// Déclaré hors du composant pour éviter la re-création à chaque render
+// et prévenir la boucle infinie dans useEffect
+const NAV_LINKS = [
+  { name: "Vision", href: "#avantage" },
+  { name: "Démo Bulletproof", href: "#methode" },
+  { name: "Expertises", href: "#expertises" },
+  { name: "Parcours", href: "#parcours" },
+  { name: "Ils en parlent", href: "#recommandations" },
+] as const;
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const links = [
-    { name: "Vision", href: "#avantage" },
-    { name: "Démo Bulletproof", href: "#methode" },
-    { name: "Expertises", href: "#expertises" },
-    { name: "Parcours", href: "#parcours" },
-    { name: "Ils en parlent", href: "#recommandations" },
-  ];
+  const links = NAV_LINKS;
 
   useEffect(() => {
     const observerOptions = {
@@ -33,7 +37,7 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-    links.forEach((link) => {
+    NAV_LINKS.forEach((link) => {
       const element = document.querySelector(link.href);
       if (element) observer.observe(element);
     });
@@ -44,12 +48,12 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [links]);
+  }, []); // Tableau vide : NAV_LINKS est une constante stable hors du composant
 
   return (
     <>

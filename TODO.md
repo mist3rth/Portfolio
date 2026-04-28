@@ -21,7 +21,7 @@
 - [x] Implémenter le SEO (Meta tags complets, JSON-LD schema).
 - [x] Harmoniser le padding des cartes à 10px sur mobile (`Timeline`, `Testimonials`, `Expertises`, `ValueProp`).
 - [x] Améliorer le contraste du footer pour la conformité WCAG (links & infos).
-- [ ] Réaliser l'audit d'accessibilité final (Navigation full clavier).
-- [ ] Réaliser l'audit de performance globale (Lighthouse: LCP, CLS).
-- [ ] Valider auprès de l'utilisateur la conformité finale.
+- [x] Réaliser l'audit d'accessibilité final (Navigation full clavier).
+- [x] Réaliser l'audit de performance globale (Correctifs: Navbar loop, Hero CSS extraction, Isometric lazy-render).
+- [x] Valider auprès de l'utilisateur la conformité finale.
 
