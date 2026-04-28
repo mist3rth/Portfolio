@@ -148,9 +148,9 @@ export default function Home() {
         </div>
       </section>
       
-      <footer className="bg-[#030303] border-t border-white/5 py-12 px-6 flex flex-col items-center gap-6 text-sm text-white/40 relative z-10 text-center">
+      <footer className="bg-[#030303] border-t border-white/5 py-12 px-6 flex flex-col items-center gap-6 text-sm text-white/60 relative z-10 text-center">
         <p className="font-light tracking-wide italic">© {new Date().getFullYear()} {personalInfo.name}. Construit selon la méthode BMAD.</p>
-        <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 font-mono text-xs text-white/70">
+        <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 font-mono text-xs text-white/90">
           <a 
             href="https://mist3rth.github.io/Reflex.io/" 
             target="_blank" 

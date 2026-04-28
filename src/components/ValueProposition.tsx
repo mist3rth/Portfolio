@@ -39,9 +39,9 @@ export default function ValueProposition() {
                     En éliminant les couches logicielles intermédiaires, le code devient "Evergreen". Il traverse les années sans maintenance forcée, résiste aux caprices des clients de messagerie, et assure une <strong>Brand Safety absolue</strong>. La marque garde le contrôle total de son image, sans être prisonnière d'une plateforme.
                   </p>
                 </div>
-                <div className="flex gap-4 mt-8">
-                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-white/70 border border-white/10">#FutureProof</span>
-                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-white/70 border border-white/10">#NativeCode</span>
+                <div className="flex flex-col sm:flex-row gap-3 mt-8">
+                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-white/70 border border-white/10 w-full sm:w-fit text-center">#FutureProof</span>
+                  <span className="bg-white/5 px-4 py-2 rounded-full text-xs font-mono text-white/70 border border-white/10 w-full sm:w-fit text-center">#NativeCode</span>
                 </div>
               </div>
               

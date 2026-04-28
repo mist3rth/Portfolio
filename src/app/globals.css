@@ -55,13 +55,14 @@
 
 .light-mode .text-gray-300, 
 .light-mode .text-gray-400,
+.light-mode .text-gray-500,
 .light-mode .text-secondary {
-  color: #4a4a4a;
+  color: #4a4a4a !important;
 }
 
 .light-mode .text-white,
 .light-mode .text-primary {
-  color: #030303;
+  color: #030303 !important;
 }
 
 .light-mode .bg-black\/40,
@@ -81,6 +82,29 @@
 .light-mode .border-white\/10,
 .light-mode .border-glass-border {
   border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Surcharge des classes d'opacité Tailwind pour le mode clair */
+.light-mode .text-white\/30,
+.light-mode .text-white\/40,
+.light-mode .text-white\/50,
+.light-mode .text-white\/60,
+.light-mode .text-white\/70,
+.light-mode .text-white\/80,
+.light-mode .text-white\/90 {
+  color: var(--foreground) !important;
+}
+
+.light-mode .bg-white\/5,
+.light-mode .bg-white\/10,
+.light-mode .bg-white\/20 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode .border-white\/5,
+.light-mode .border-white\/10,
+.light-mode .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 body {

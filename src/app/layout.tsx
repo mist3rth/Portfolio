@@ -8,6 +8,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://misterth.github.io/Portfolio"),
   title: "Thierry Thiesson | Email Architect Senior — CDI Paris",
   description: "25 ans d'expertise en architecture email HTML/CSS bulletproof. Chef de Projet CRM & Email Architect Senior chez Proximity Paris (BBDO). Disponible en CDI — Paris / Île-de-France / Remote.",
   keywords: ["Email Architect", "CRM Technique", "HTML Email", "Bulletproof Email", "Salesforce Marketing Cloud", "Adobe Campaign", "Proximity Paris", "BBDO", "CDI Paris", "Chef de Projet CRM"],
