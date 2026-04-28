@@ -24,7 +24,7 @@ export default function ContactButton({ className, label = "Me contacter", varia
     }, 3000);
   };
 
-  const baseStyles = "transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden";
+  const baseStyles = "transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden cursor-pointer";
   
   const variants = {
     primary: "bg-accent text-white px-8 py-4 rounded-full font-bold text-lg shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:shadow-[0_0_50px_rgba(59,130,246,0.8)] hover:scale-105 hover:bg-blue-500",

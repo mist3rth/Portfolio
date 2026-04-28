@@ -99,23 +99,25 @@ export default function Testimonials() {
 
               {/* Auteur */}
               <div className="relative z-10 mt-8 pt-6 border-t border-white/5">
-                <div className="flex items-start gap-4">
-                  {/* Avatar */}
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white/10 shrink-0 shadow-xl">
-                    <Image src={t.photo} alt={t.name} fill className="object-cover" sizes="56px" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-bold text-primary text-base leading-tight">{t.name}</p>
-                    <p className="text-xs text-secondary font-mono mt-1 leading-snug">
-                      {t.role}
-                    </p>
-                    <p className="text-xs text-accent font-mono mt-0.5 mb-3">{t.company}</p>
-                    
-                    {/* Badge de vérification */}
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
-                      <span className={`w-2 h-2 rounded-full ${t.dotColor} animate-pulse`}></span>
-                      <span className="text-[10px] font-bold font-mono text-secondary uppercase tracking-widest">Avis vérifiés</span>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-4 w-full">
+                    {/* Avatar */}
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white/10 shrink-0 shadow-xl">
+                      <Image src={t.photo} alt={t.name} fill className="object-cover" sizes="56px" />
                     </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-bold text-primary text-base md:text-lg leading-tight">{t.name}</p>
+                      <p className="text-xs md:text-sm text-secondary font-mono mt-1 leading-snug">
+                        {t.role}
+                      </p>
+                      <p className="text-xs md:text-sm text-accent font-mono mt-0.5">{t.company}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Badge de vérification - En dessous */}
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
+                    <span className={`w-2 h-2 rounded-full ${t.dotColor} animate-pulse`}></span>
+                    <span className="text-[10px] font-bold font-mono text-secondary uppercase tracking-widest">Avis vérifiés</span>
                   </div>
                 </div>
               </div>

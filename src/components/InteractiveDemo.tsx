@@ -18,13 +18,13 @@ export default function InteractiveDemo() {
         <div className="flex items-center gap-2 bg-white/5 p-1.5 rounded-full border border-glass-border shadow-2xl backdrop-blur-md">
           <button 
             onClick={() => setImagesEnabled(true)}
-            className={`flex items-center gap-2 md:gap-3 pl-[10px] pr-[10px] md:px-8 py-4 rounded-full font-bold transition-all duration-300 text-sm tracking-wide ${imagesEnabled ? 'bg-white text-black shadow-lg shadow-white/10' : 'text-secondary hover:text-primary'}`}
+            className={`flex items-center gap-2 md:gap-3 pl-[10px] pr-[10px] md:px-8 py-4 rounded-full font-bold transition-all duration-300 text-sm tracking-wide cursor-pointer ${imagesEnabled ? 'bg-white text-black shadow-lg shadow-white/10' : 'text-secondary hover:text-primary'}`}
           >
             <ImageIcon size={18} /> Images ON
           </button>
           <button 
             onClick={() => setImagesEnabled(false)}
-            className={`flex items-center gap-2 md:gap-3 pl-[10px] pr-[10px] md:px-8 py-4 rounded-full font-bold transition-all duration-300 text-sm tracking-wide ${!imagesEnabled ? 'bg-accent text-white shadow-[0_0_20px_rgba(59,130,246,0.5)]' : 'text-secondary hover:text-primary'}`}
+            className={`flex items-center gap-2 md:gap-3 pl-[10px] pr-[10px] md:px-8 py-4 rounded-full font-bold transition-all duration-300 text-sm tracking-wide cursor-pointer ${!imagesEnabled ? 'bg-accent text-white shadow-[0_0_20px_rgba(59,130,246,0.5)]' : 'text-secondary hover:text-primary'}`}
           >
             <ImageOff size={18} /> Images OFF
           </button>

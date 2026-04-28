@@ -53,24 +53,24 @@
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.light-mode .text-gray-300, 
-.light-mode .text-gray-400,
-.light-mode .text-gray-500,
+/* Exception pour le texte blanc sur fond bleu (accent) */
+.light-mode .bg-accent .text-white,
+.light-mode .bg-accent.text-white,
+.light-mode [class*="bg-accent"] .text-white {
+  color: #ffffff !important;
+}
+
+.light-mode [class*="bg-accent"] .text-secondary {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
 .light-mode .text-secondary {
   color: #4a4a4a !important;
 }
 
-.light-mode .text-white,
-.light-mode .text-primary {
+.light-mode .text-primary,
+.light-mode .text-white {
   color: #030303 !important;
-}
-
-/* Exception pour le texte blanc sur fond bleu (accent) */
-.light-mode .bg-accent .text-white,
-.light-mode .bg-accent.text-white,
-.light-mode [class*="bg-accent"] .text-white,
-.light-mode [class*="bg-accent"] .text-secondary {
-  color: #ffffff !important;
 }
 
 .light-mode .bg-black\/40,
@@ -106,13 +106,13 @@
 .light-mode .bg-white\/5,
 .light-mode .bg-white\/10,
 .light-mode .bg-white\/20 {
-  background-color: rgba(0, 0, 0, 0.05) !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
 }
 
 .light-mode .border-white\/5,
 .light-mode .border-white\/10,
 .light-mode .border-white\/20 {
-  border-color: rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 body {

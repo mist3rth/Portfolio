@@ -38,7 +38,17 @@ export default function Navbar() {
       if (element) observer.observe(element);
     });
 
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (window.scrollY < 100) {
+        setActiveSection("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [links]);
 
   return (
@@ -68,7 +78,7 @@ export default function Navbar() {
               <a 
                 key={link.href} 
                 href={link.href} 
-                className={`relative transition-all duration-300 py-2 group ${activeSection === link.href ? 'text-white' : 'text-gray-400 hover:text-white'}`}
+                className={`relative transition-all duration-300 py-2 group cursor-pointer ${activeSection === link.href ? 'text-white' : 'text-gray-400 hover:text-white'}`}
               >
                 {link.name}
                 <span className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 shadow-[0_0_8px_rgba(59,130,246,0.8)] ${activeSection === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -90,7 +100,7 @@ export default function Navbar() {
               key={link.href} 
               href={link.href} 
               onClick={() => setIsOpen(false)}
-              className={`text-2xl font-bold text-white transition-all duration-300 hover:text-accent transform ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+              className={`text-2xl font-bold text-white transition-all duration-300 hover:text-accent transform cursor-pointer ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
               style={{ transitionDelay: `${isOpen ? i * 100 : 0}ms` }}
             >
               {link.name}
