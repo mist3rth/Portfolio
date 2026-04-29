@@ -23,5 +23,6 @@
 - [x] Améliorer le contraste du footer pour la conformité WCAG (links & infos).
 - [x] Réaliser l'audit d'accessibilité final (Navigation full clavier).
 - [x] Réaliser l'audit de performance globale (Correctifs: Navbar loop, Hero CSS extraction, Isometric lazy-render).
+- [x] Optimiser le score PageSpeed mobile (SSR désactivé sous le pli, optimisation LCP, font-display swap, images opt/).
 - [x] Valider auprès de l'utilisateur la conformité finale.
 

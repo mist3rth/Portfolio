@@ -61,6 +61,7 @@ export default function ValueProposition() {
                       width={240}
                       height={480}
                       className="w-full h-auto block"
+                      sizes="240px"
                     />
                   </div>
                 </div>

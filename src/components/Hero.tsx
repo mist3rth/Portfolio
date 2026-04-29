@@ -12,12 +12,13 @@ export default function Hero() {
       {/* Background Portrait Image - Full Screen Width */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <Image 
-          src="/Portfolio/hero-portrait-v2.webp" 
+          src="/Portfolio/opt/hero-portrait-v2.webp" 
           alt="Thierry Thiesson Portrait" 
           fill
           className="object-cover object-[100%_top] md:object-[90%_top] lg:object-right-top"
           priority
           quality={90}
+          sizes="100vw"
         />
       </div>
 

@@ -10,12 +10,12 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ContactButton from "@/components/ContactButton";
 
 // Chargement dynamique des sections lourdes sous le fold
-const ValueProposition = dynamic(() => import("@/components/ValueProposition"), { ssr: true });
-const InteractiveDemo = dynamic(() => import("@/components/InteractiveDemo"), { ssr: true });
-const Expertises = dynamic(() => import("@/components/Expertises"), { ssr: true });
-const Marquee = dynamic(() => import("@/components/Marquee"), { ssr: true });
-const Timeline = dynamic(() => import("@/components/Timeline"), { ssr: true });
-const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: true });
+const ValueProposition = dynamic(() => import("@/components/ValueProposition"), { ssr: true }); // Important pour le SEO
+const InteractiveDemo = dynamic(() => import("@/components/InteractiveDemo"), { ssr: false });
+const Expertises = dynamic(() => import("@/components/Expertises"), { ssr: true }); // Important pour le SEO
+const Marquee = dynamic(() => import("@/components/Marquee"), { ssr: false });
+const Timeline = dynamic(() => import("@/components/Timeline"), { ssr: false });
+const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: false });
 
 export default function Home() {
   const jsonLd = {
@@ -83,19 +83,21 @@ export default function Home() {
               {/* Desktop & Tablet : Regard Face */}
               <div className="hidden min-[851px]:block absolute inset-0">
                 <Image 
-                  src="/Portfolio/man.webp" 
+                  src="/Portfolio/opt/man.webp" 
                   alt="Thierry Thiesson" 
                   fill
                   className="object-cover object-center"
+                  sizes="300px"
                 />
               </div>
               {/* Mobile : Regard Bas (orienté vers le CTA) */}
               <div className="block min-[851px]:hidden absolute inset-0">
                 <Image 
-                  src="/Portfolio/manDown.webp" 
+                  src="/Portfolio/opt/manDown.webp" 
                   alt="Thierry Thiesson" 
                   fill
                   className="object-cover object-center"
+                  sizes="300px"
                 />
               </div>
               {/* Fade noir en bas pour intégrer l'arche en douceur */}

@@ -34,11 +34,11 @@
 /* Hero animations — extraites du JSX pour éviter le style inline render-blocking */
 .animate-slide-up-1 {
   opacity: 0;
-  animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
 }
 .animate-slide-up-2 {
   opacity: 0;
-  animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
 }
 
 @media (max-width: 767px) {
