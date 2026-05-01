@@ -3,7 +3,6 @@ import ContactButton from "./ContactButton";
 import { ArrowRight, Terminal } from "lucide-react";
 import Image from "next/image";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import Typewriter from "@/components/Typewriter";
 
 export default function Hero() {
   return (
@@ -28,18 +27,16 @@ export default function Hero() {
       </div>
 
       <div className="space-y-8 w-full max-w-7xl mx-auto px-6 md:px-12 z-10 relative mt-12 pb-20">
-        {/* Badge Glassmorphism Chirurgical */}
-        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+        <div className="flex items-center gap-3">
           <Terminal size={14} className="text-accent drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
-          <span className="text-accent font-mono text-xs md:text-sm font-semibold tracking-widest uppercase drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] min-h-[20px] min-w-[180px] md:min-w-[240px] flex items-center">
-            <Typewriter text={personalInfo.title} speed={25} />
+          <span className="text-accent font-mono text-xs md:text-sm font-semibold tracking-widest uppercase drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+            {personalInfo.title}
           </span>
         </div>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1] text-white tracking-tight drop-shadow-xl flex flex-col gap-2 md:gap-4">
-          <span className="animate-slide-up-1 block">Je ne me contente pas de coder des emails.</span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-300 text-glow animate-slide-up-2 block">
+          <span className="block">Je ne me contente pas de coder des emails.</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-300 text-glow block">
             Je sécurise vos actifs marketing.
           </span>
         </h1>
