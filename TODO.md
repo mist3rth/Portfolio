@@ -30,4 +30,9 @@
 ## Phase 5 : Optimisations UI Avancées
 - [x] Transformer la grille d'expertises en carrousel mobile (scroll-snap horizontal).
 - [x] Stabiliser le CLS et supprimer le "saut" de la section Vision (ValueProposition) via ScrollReveal `instant`.
-- [x] Optimiser `DynamicSections` : Suppression du LazyLoading pour les sections hautes (`Vision` / `Expertises`) et passage en SSR pour `Expertises` afin d'éliminer les décalages visuels au scroll.
+- [x] Optimiser `DynamicSections` : Suppression totale du LazyLoading des sections (`DynamicSections.tsx` rendu statique) pour garantir une stabilité absolue du scroll (Zéro CLS/Glitches).
+- [x] Optimisation Performance (TBT) : Implémentation de la stratégie `Idle Loading` sur `IsometricBackground.tsx` (hydratation différée via `requestIdleCallback`).
+- [x] Correction SEO/Social : Fix de l'URL Open Graph (`og:url`) et ajout d'URL canonique incluant le sous-répertoire `/Portfolio/`.
+- [x] Personnalisation Meta : Mise à jour du titre SEO pour inclure la disponibilité CDI et la localisation (Paris/Hybride).
+- [x] Déploiement : Validation de la chaîne CI/CD GitHub Actions vers GitHub Pages.
+- [x] UI : Suppression du texte d'aide "Glissez pour voir la suite" sous le carrousel mobile Testimonials pour épurer l'interface.

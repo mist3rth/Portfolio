@@ -198,12 +198,7 @@ function MobileCarousel() {
         ))}
       </div>
 
-      {/* Hint swipe — disparaît après le premier scroll */}
-      {activeIndex === 0 && (
-        <p className="text-center text-white/30 text-xs font-mono mt-4 animate-pulse">
-          ← Glissez pour voir la suite →
-        </p>
-      )}
+
     </div>
   );
 }
