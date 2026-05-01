@@ -11,12 +11,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mist3rth.github.io/Portfolio/"),
-  title: "Thierry Thiesson | Email Architect Senior — CDI Paris",
+  title: "Thierry Thiesson | Email Architect Senior — Disponible en CDI - Paris/Hybride",
   description: "25 ans d'expertise en architecture email HTML/CSS bulletproof. Chef de Projet CRM & Email Architect Senior chez Proximity Paris (BBDO). Disponible en CDI — Paris / Île-de-France / Hybride.",
   keywords: ["Email Architect", "CRM Technique", "HTML Email", "Bulletproof Email", "Salesforce Marketing Cloud", "Adobe Campaign", "Proximity Paris", "BBDO", "CDI Paris", "Chef de Projet CRM"],
   authors: [{ name: "Thierry Thiesson", url: "https://www.linkedin.com/in/thierry-thiesson-7887501/" }],
   openGraph: {
-    title: "Thierry Thiesson | Email Architect Senior — Disponible en CDI",
+    title: "Thierry Thiesson | Email Architect Senior — Disponible en CDI - Paris/Hybride",
     description: "25 ans d'expertise en architecture email HTML/CSS bulletproof. Disponible en CDI — Paris / Hybride.",
     url: "https://mist3rth.github.io/Portfolio/",
     type: "profile",
