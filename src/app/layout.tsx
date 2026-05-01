@@ -18,10 +18,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Thierry Thiesson | Email Architect Senior — Disponible en CDI",
     description: "25 ans d'expertise en architecture email HTML/CSS bulletproof. Disponible en CDI — Paris / Hybride.",
-    url: "https://mist3rth.github.io/Portfolio",
+    url: "https://mist3rth.github.io/Portfolio/",
     type: "profile",
     locale: "fr_FR",
     images: [{ url: "/Portfolio/og-image.webp", width: 1200, height: 630, alt: "Thierry Thiesson — Email Architect Senior" }],
+  },
+  alternates: {
+    canonical: "https://mist3rth.github.io/Portfolio/",
   },
 };
 
