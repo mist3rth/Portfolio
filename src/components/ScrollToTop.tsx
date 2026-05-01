@@ -7,31 +7,34 @@ export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      const scrolled = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.documentElement.scrollHeight;
-      
-      // La hauteur maximale qu'on peut scroller
-      const scrollableDistance = fullHeight - windowHeight;
-      // 70% de cette hauteur
-      const threshold = scrollableDistance * 0.7;
+    let ticking = false;
 
-      if (scrolled > threshold) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+    const toggleVisibility = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY;
+          // On simplifie le calcul : on affiche après 1000px de scroll au lieu de calculer le scrollableDistance
+          // Cela évite de lire scrollHeight qui force un reflow
+          if (scrolled > 1000) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
-    // Vérification initiale
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
     toggleVisibility();
 
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
+    // Signale à la Navbar de geler son observer pendant la remontée
+    window.dispatchEvent(new CustomEvent("nav:freeze", { detail: { duration: 1200 } }));
     window.scrollTo({
       top: 0,
       behavior: "smooth",

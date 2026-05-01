@@ -54,8 +54,16 @@ export default function AnimatedCounter({ end, suffix = "", prefix = "", duratio
   const formattedCount = count.toLocaleString('fr-FR');
 
   return (
-    <span ref={elementRef}>
-      {prefix}{formattedCount}{suffix}
+    <span ref={elementRef} className="relative inline-block tabular-nums">
+      {/* Réservation de l'espace pour éviter le CLS */}
+      <span className="invisible select-none opacity-0 pointer-events-none" aria-hidden="true">
+        {prefix}{end.toLocaleString('fr-FR')}{suffix}
+      </span>
+      
+      <span className="absolute left-0 top-0 w-full text-left">
+        {prefix}{formattedCount}{suffix}
+      </span>
     </span>
   );
 }
+

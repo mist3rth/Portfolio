@@ -7,7 +7,7 @@ export default function InteractiveDemo() {
   const [imagesEnabled, setImagesEnabled] = useState(true);
 
   return (
-    <section className="py-32 px-6 md:px-12 max-w-7xl mx-auto w-full relative z-10" id="methode">
+    <section className="py-32 px-6 md:px-12 max-w-7xl mx-auto w-full relative z-10">
       <div className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <div className="md:w-3/5">
           <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-6 leading-[1.1] tracking-tight">Démo Bulletproof.</h2>
@@ -47,6 +47,7 @@ export default function InteractiveDemo() {
               width={420}
               height={1200}
               className={`w-full h-auto block transition-opacity duration-500 ${imagesEnabled ? 'opacity-100' : 'opacity-95'}`}
+              loading="lazy"
             />
           </div>
         </div>

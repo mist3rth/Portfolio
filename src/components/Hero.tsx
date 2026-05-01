@@ -22,15 +22,17 @@ export default function Hero() {
         />
       </div>
 
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
+      {/* Background Glow - Stabilisé pour éviter le CLS */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-[40%] left-[20%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-accent/20 rounded-full blur-[100px] md:blur-[150px]"></div>
+      </div>
 
       <div className="space-y-8 w-full max-w-7xl mx-auto px-6 md:px-12 z-10 relative mt-12 pb-20">
         {/* Badge Glassmorphism Chirurgical */}
         <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           <Terminal size={14} className="text-accent drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
-          <span className="text-accent font-mono text-xs md:text-sm font-semibold tracking-widest uppercase drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] min-h-[20px] flex items-center">
+          <span className="text-accent font-mono text-xs md:text-sm font-semibold tracking-widest uppercase drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] min-h-[20px] min-w-[180px] md:min-w-[240px] flex items-center">
             <Typewriter text={personalInfo.title} speed={25} />
           </span>
         </div>
@@ -46,12 +48,13 @@ export default function Hero() {
           Spécialiste de l'architecture email haute performance. Je garantis un rendu 100% conforme sur la totalité du parc de messagerie mondial via une approche "Bulletproof".
         </p>
 
-        <div className="pt-6 flex flex-wrap gap-4 md:gap-6 items-center">
+        <div className="flex flex-wrap gap-4 md:gap-6 items-center">
           <ContactButton label="Organiser un entretien" className="max-md:px-[10px] cursor-pointer" />
           <a 
             href="/Portfolio/cv-thierry-thiesson.pdf" 
             download="CV-Thierry-Thiesson-Email-Architect.pdf"
             className="bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-4 max-md:px-[10px] rounded-full font-bold transition-all duration-300 text-lg backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:border-white/30 flex items-center gap-2 cursor-pointer"
+            aria-label="Télécharger le CV de Thierry Thiesson au format PDF"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Télécharger le CV
@@ -61,7 +64,9 @@ export default function Hero() {
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center gap-2 bg-[#0077b5]/10 border border-[#0077b5]/30 hover:bg-[#0077b5]/20 text-white px-6 py-4 max-md:px-[10px] rounded-full font-bold transition-all duration-300 text-lg backdrop-blur-md hover:border-[#0077b5]/60 hover:shadow-[0_0_15px_rgba(0,119,181,0.4)] cursor-pointer"
+            aria-label="Voir le profil LinkedIn de Thierry Thiesson"
           >
+
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
             LinkedIn
           </a>
@@ -70,13 +75,13 @@ export default function Hero() {
         {/* Biais de Réassurance / Social Proof */}
         <div className="pt-12 mt-4 border-t border-white/10 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl">
           <div className="flex flex-col">
-            <span className="text-4xl font-extrabold text-white drop-shadow-md">
+            <span className="text-4xl font-extrabold text-white drop-shadow-md min-w-[140px]">
               <AnimatedCounter end={2500} prefix="+" duration={2000} />
             </span>
             <span className="text-sm font-mono text-accent/80 mt-1 uppercase tracking-wider">Campagnes intégrées</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-4xl font-extrabold text-white drop-shadow-md">
+            <span className="text-4xl font-extrabold text-white drop-shadow-md min-w-[140px]">
               <AnimatedCounter end={250} prefix="+" suffix="M" duration={2000} />
             </span>
             <span className="text-sm font-mono text-accent/80 mt-1 uppercase tracking-wider">Emails routés</span>

@@ -4,7 +4,7 @@ import IsometricBackground from "@/components/IsometricBackground";
 
 export default function Timeline() {
   return (
-    <section className="py-24 w-full relative z-10 overflow-hidden" id="parcours">
+    <section className="py-24 w-full relative z-10 overflow-hidden">
       {/* Background Isométrique - Uniquement sur Desktop pour performance mobile */}
       <div className="hidden md:block">
         <IsometricBackground />

@@ -6,7 +6,7 @@ export default function ValueProposition() {
   return (
     <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full relative z-10" id="avantage">
       
-      <ScrollReveal animation="slide-up" delay={0}>
+      <ScrollReveal animation="slide-up" delay={0} instant={true}>
         <div className="mb-16 md:w-3/4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-6 leading-tight tracking-tight">
             L'email n'est pas un simple consommable. <br/>
@@ -59,9 +59,10 @@ export default function ValueProposition() {
                       src="/Portfolio/screenKrysMob.webp" 
                       alt="Rendu Mobile Krys" 
                       width={240}
-                      height={480}
+                      height={2717}
                       className="w-full h-auto block"
                       sizes="240px"
+                      priority
                     />
                   </div>
                 </div>

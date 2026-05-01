@@ -18,7 +18,7 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   
-  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee: marquee 160s linear infinite;
   
   @keyframes marquee {
     0% { transform: translateX(0%); }
@@ -43,7 +43,7 @@
 
 @media (max-width: 767px) {
   :root {
-    --animate-marquee: marquee 10s linear infinite;
+    --animate-marquee: marquee 40s linear infinite;
   }
 }
 
@@ -69,13 +69,23 @@
 }
 
 /* Exception pour le texte blanc sur fond bleu (accent) */
-.light-mode .bg-accent .text-white,
-.light-mode .bg-accent.text-white,
-.light-mode [class*="bg-accent"] .text-white {
+.light-mode .bg-accent.text-white {
   color: #ffffff !important;
 }
 
-.light-mode [class*="bg-accent"] .text-secondary {
+/* Force le texte blanc sur la nav noire en mode Light */
+.light-mode .nav-solid .text-white,
+.light-mode .nav-solid .text-primary,
+.light-mode .nav-solid a {
+  color: #ffffff !important;
+}
+
+.light-mode .nav-solid .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.light-mode .bg-accent .text-secondary,
+.light-mode .bg-accent.text-secondary {
   color: rgba(255, 255, 255, 0.85) !important;
 }
 

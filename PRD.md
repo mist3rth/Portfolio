@@ -22,6 +22,7 @@ Pour éviter toute interruption du flow, le site se présentera comme un parcour
 
 **C. L'Expertise Technique (Biais d'Ancrage & Hiérarchie)**
 - **Contenu** : Mise en avant de "25 ans d'expertise", le VML, et le code natif vs Drag&Drop.
+- **UX Mobile** : Conversion de la grille d'expertises en un carrousel horizontal (scroll-snap) pour une navigation tactile fluide et un gain d'espace vertical.
 - **Micro-animation** : Au survol des cartes d'expertise (ex: VML ou Ghost Tables), le fond de la carte révèle subtilement la syntaxe de code (`<v:roundrect>`, `<!--[if mso]>`) en opacité réduite.
 
 **D. La Preuve Sociale (Biais de Conformité & Rareté)**

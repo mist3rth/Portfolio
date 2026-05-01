@@ -20,12 +20,10 @@ const images = [
 ];
 
 export default function IsometricBackground() {
-  const [visibleColumns, setVisibleColumns] = useState(8);
-  const [isInView, setIsInView] = useState(false);
-
+  const [visibleColumns, setVisibleColumns] = useState(2);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1024) setVisibleColumns(8);
+      if (window.innerWidth > 1024) setVisibleColumns(6);
       else if (window.innerWidth > 768) setVisibleColumns(4);
       else setVisibleColumns(2);
     };
@@ -33,18 +31,8 @@ export default function IsometricBackground() {
     handleResize();
     window.addEventListener('resize', handleResize, { passive: true });
 
-    // Performance : On ne charge/anime que si visible
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0, rootMargin: "200px" }
-    );
-
-    const el = document.getElementById('isometric-trigger');
-    if (el) observer.observe(el);
-
     return () => {
       window.removeEventListener('resize', handleResize);
-      observer.disconnect();
     };
   }, []);
 
@@ -58,80 +46,74 @@ export default function IsometricBackground() {
   // On génère le tableau final selon le besoin réel
   const columns = [...baseColumns, ...baseColumns].slice(0, visibleColumns);
 
-  if (!isInView) {
-    return <div id="isometric-trigger" className="absolute inset-0 pointer-events-none" />;
-  }
-
   return (
     <div id="isometric-trigger" className="absolute inset-0 overflow-hidden pointer-events-none z-0">
       
       {/* 1. Les colonnes d'images (z-0) */}
       <div 
         className="absolute w-[180vw] h-[180vh] left-1/2 top-1/2 flex gap-8 md:gap-16 opacity-70"
-        style={{
-          transform: "translate(-50%, -50%) rotate(-30deg) skewX(15deg) scale(1.1)",
-          transformOrigin: "center center",
-          zIndex: 0
-        }}
-      >
-        {columns.map((col, colIdx) => (
-          <div 
-            key={colIdx} 
-            className="flex-1 flex flex-col min-w-[180px] md:min-w-[280px]"
-            style={{
-              animation: `marqueeY ${colIdx % 2 === 0 ? '70s' : '90s'} linear infinite ${colIdx % 2 === 0 ? 'normal' : 'reverse'}`,
-              willChange: 'transform'
-            }}
-          >
-            {/* BLOC 1 : Contenu original */}
-            <div className="flex flex-col gap-8 md:gap-16 pb-8 md:pb-16">
-              {col.map((src, imgIdx) => (
-                <div 
-                  key={`b1-${colIdx}-${imgIdx}`} 
-                  className="relative w-full shrink-0 h-[220px] md:h-[350px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
-                >
-                  <Image 
-                    src={src} 
-                    alt="" 
-                    fill
-                    loading="lazy"
-                    decoding="async"
-                    unoptimized
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 180px, 280px"
-                  />
-                </div>
-              ))}
+          style={{
+            transform: "translate(-50%, -50%) rotate(-30deg) skewX(15deg) scale(1.1)",
+            transformOrigin: "center center",
+            zIndex: 0
+          }}
+        >
+          {columns.map((col, colIdx) => (
+            <div 
+              key={colIdx} 
+              className="flex-1 flex flex-col min-w-[180px] md:min-w-[280px]"
+              style={{
+                animation: `marqueeY ${colIdx % 2 === 0 ? '70s' : '90s'} linear infinite ${colIdx % 2 === 0 ? 'normal' : 'reverse'}`,
+                willChange: 'transform'
+              }}
+            >
+              {/* BLOC 1 : Contenu original */}
+              <div className="flex flex-col gap-8 md:gap-16 pb-8 md:pb-16">
+                {col.map((src, imgIdx) => (
+                  <div 
+                    key={`b1-${colIdx}-${imgIdx}`} 
+                    className="relative w-full shrink-0 h-[220px] md:h-[350px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
+                  >
+                    <Image 
+                      src={src} 
+                      alt="" 
+                      fill
+                      loading="lazy"
+                      decoding="async"
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 180px, 280px"
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* BLOC 2 : Clone pour boucle infinie */}
+              <div className="flex flex-col gap-8 md:gap-16 pb-8 md:pb-16">
+                {col.map((src, imgIdx) => (
+                  <div 
+                    key={`b2-${colIdx}-${imgIdx}`} 
+                    className="relative w-full shrink-0 h-[220px] md:h-[350px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
+                  >
+                    <Image 
+                      src={src} 
+                      alt="" 
+                      fill
+                      loading="lazy"
+                      decoding="async"
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 180px, 280px"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            {/* BLOC 2 : Clone pour boucle infinie */}
-            <div className="flex flex-col gap-8 md:gap-16 pb-8 md:pb-16">
-              {col.map((src, imgIdx) => (
-                <div 
-                  key={`b2-${colIdx}-${imgIdx}`} 
-                  className="relative w-full shrink-0 h-[220px] md:h-[350px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
-                >
-                  <Image 
-                    src={src} 
-                    alt="" 
-                    fill
-                    loading="lazy"
-                    decoding="async"
-                    unoptimized
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 180px, 280px"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
       {/* 2. Léger masque de dégradé */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-transparent to-[#030303] opacity-80 pointer-events-none" style={{ zIndex: 10 }}></div>
 
-      <style>{`
+      <style jsx>{`
         @keyframes marqueeY {
           0% { transform: translateY(0); }
           100% { transform: translateY(-50%); }
@@ -140,4 +122,5 @@ export default function IsometricBackground() {
     </div>
   );
 }
+
 

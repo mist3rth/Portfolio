@@ -22,7 +22,12 @@
 - [x] Harmoniser le padding des cartes à 10px sur mobile (`Timeline`, `Testimonials`, `Expertises`, `ValueProp`).
 - [x] Améliorer le contraste du footer pour la conformité WCAG (links & infos).
 - [x] Réaliser l'audit d'accessibilité final (Navigation full clavier).
-- [x] Réaliser l'audit de performance globale (Correctifs: Navbar loop, Hero CSS extraction, Isometric lazy-render).
 - [x] Optimiser le score PageSpeed mobile (SSR désactivé sous le pli, optimisation LCP, font-display swap, images opt/).
+- [x] Réduire le TBT sur desktop (Throttling des scroll listeners, requestAnimationFrame).
+- [x] Stabiliser le CLS sur mobile (Réservation de hauteur minHeight précise pour LazySection).
 - [x] Valider auprès de l'utilisateur la conformité finale.
 
+## Phase 5 : Optimisations UI Avancées
+- [x] Transformer la grille d'expertises en carrousel mobile (scroll-snap horizontal).
+- [x] Stabiliser le CLS et supprimer le "saut" de la section Vision (ValueProposition) via ScrollReveal `instant`.
+- [x] Optimiser `DynamicSections` : Suppression du LazyLoading pour les sections hautes (`Vision` / `Expertises`) et passage en SSR pour `Expertises` afin d'éliminer les décalages visuels au scroll.

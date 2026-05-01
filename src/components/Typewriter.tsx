@@ -25,10 +25,18 @@ export default function Typewriter({ text, speed = 40 }: { text: string; speed?:
   }, [text, speed]);
 
   return (
-    <span className="inline-flex items-center">
-      {displayedText}
-      {/* Curseur rectangulaire typique des terminaux, qui clignote */}
-      <span className="inline-block w-1.5 h-[1.1em] bg-accent ml-1 opacity-80 animate-pulse"></span>
+    <span className="relative inline-flex items-center">
+      {/* Réservation de l'espace pour éviter le CLS */}
+      <span className="invisible select-none opacity-0 pointer-events-none" aria-hidden="true">
+        {text}
+      </span>
+      
+      <span className="absolute left-0 top-0 whitespace-nowrap flex items-center">
+        {displayedText}
+        {/* Curseur rectangulaire typique des terminaux, qui clignote */}
+        <span className="inline-block w-1.5 h-[1.1em] bg-accent ml-1 opacity-80 animate-pulse"></span>
+      </span>
     </span>
   );
 }
+

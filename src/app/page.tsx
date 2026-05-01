@@ -8,14 +8,10 @@ import { ExternalLink } from "lucide-react";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import ScrollToTop from "@/components/ScrollToTop";
 import ContactButton from "@/components/ContactButton";
+import DynamicSections from "@/components/DynamicSections";
 
-// Chargement dynamique des sections lourdes sous le fold
-const ValueProposition = dynamic(() => import("@/components/ValueProposition"), { ssr: true }); // Important pour le SEO
-const InteractiveDemo = dynamic(() => import("@/components/InteractiveDemo"), { ssr: false });
-const Expertises = dynamic(() => import("@/components/Expertises"), { ssr: true }); // Important pour le SEO
-const Marquee = dynamic(() => import("@/components/Marquee"), { ssr: false });
-const Timeline = dynamic(() => import("@/components/Timeline"), { ssr: false });
-const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: false });
+// Les sections critiques (haut de page) gardent le SSR
+const ValueProposition = dynamic(() => import("@/components/ValueProposition"), { ssr: true });
 
 export default function Home() {
   const jsonLd = {
@@ -63,15 +59,12 @@ export default function Home() {
 
       <ThemeWrapper>
         <ValueProposition />
-        <InteractiveDemo />
-        <Expertises />
-        <Marquee />
-        <Timeline />
-        <Testimonials />
+        
+        <DynamicSections />
       </ThemeWrapper>
 
       {/* Footer / CTA (Orientation Recrutement CDI) */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-24 px-6 relative bg-[#030303] overflow-hidden border-t border-white/5">
+      <section id="cta" className="pt-24 pb-12 md:pt-32 md:pb-24 px-6 relative bg-[#030303] overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjY1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')] opacity-20 pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
         
