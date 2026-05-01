@@ -21,7 +21,21 @@ const images = [
 
 export default function IsometricBackground() {
   const [visibleColumns, setVisibleColumns] = useState(2);
+  const [isReady, setIsReady] = useState(false);
+
   useEffect(() => {
+    // Stratégie "Idle Loading" pour réduire le TBT (Total Blocking Time)
+    // On attend que le thread principal soit libre avant d'afficher le background lourd
+    const idleTask = () => {
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => setIsReady(true), { timeout: 2000 });
+      } else {
+        setTimeout(() => setIsReady(true), 1000);
+      }
+    };
+
+    idleTask();
+
     const handleResize = () => {
       if (window.innerWidth > 1024) setVisibleColumns(6);
       else if (window.innerWidth > 768) setVisibleColumns(4);
@@ -45,6 +59,8 @@ export default function IsometricBackground() {
 
   // On génère le tableau final selon le besoin réel
   const columns = [...baseColumns, ...baseColumns].slice(0, visibleColumns);
+
+  if (!isReady) return null;
 
   return (
     <div id="isometric-trigger" className="absolute inset-0 overflow-hidden pointer-events-none z-0">
