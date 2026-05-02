@@ -88,7 +88,7 @@ export default function IsometricBackground() {
                 {col.map((src, imgIdx) => (
                   <div 
                     key={`b1-${colIdx}-${imgIdx}`} 
-                    className="relative w-full shrink-0 h-[220px] md:h-[350px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
+                    className="relative w-full shrink-0 h-[320px] md:h-[500px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
                   >
                     <Image 
                       src={src} 
@@ -108,7 +108,7 @@ export default function IsometricBackground() {
                 {col.map((src, imgIdx) => (
                   <div 
                     key={`b2-${colIdx}-${imgIdx}`} 
-                    className="relative w-full shrink-0 h-[220px] md:h-[350px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
+                    className="relative w-full shrink-0 h-[320px] md:h-[500px] rounded-2xl overflow-hidden border border-white/5 bg-white/5 shadow-2xl"
                   >
                     <Image 
                       src={src} 
