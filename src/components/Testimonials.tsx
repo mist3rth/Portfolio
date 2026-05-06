@@ -9,7 +9,7 @@ const testimonials = [
   {
     quote:
       "J'ai eu l'occasion de collaborer avec Thierry sur la production de notre référentiel interne de bonnes pratiques email, un document qui fait désormais autorité au sein de l'agence. Ce qui m'a frappé, c'est sa capacité à transformer des contraintes techniques ultra-complexes (Outlook, dark mode, accessibilité) en règles simples et applicables par toute une équipe. Thierry ne se contente pas de coder : il structure, il forme et il pérennise. Il est la personne que vous voulez pour construire une architecture email solide sur le long terme.",
-    name: "Chloé Lorebours",
+    name: "Chloé Lerebours",
     role: "Creative Lead CRM / D.A.",
     company: "Proximity Paris",
     photo: "/Portfolio/opt/chloe.webp",
